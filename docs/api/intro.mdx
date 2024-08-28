@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+# Introduction
+
+NekoNya's API is a RESTful API, which means that you can use it to get data from our database. The API is open-source and available on GitHub, so you can contribute to it by submitting a pull request.
+
+The API is available at [https://nekonya.classydev.fr/api](https://nekonya.classydev.fr/api). The current version is `v1`.
+
+## What does it do?
+
+That is a pretty surprising question, as if you're here, you already know what it does. But let's explain it for the newcomers.
+
+The API allows you to essentially get random images of nekos, kitsunes, pats, and more. You can also [owoify text](/docs/api/owoify) and use a [cute 8ball](/docs/api/8ball) to get answers to your most delightful questions.
+
+## How to use it?
+
+The API is pretty simple to use. You can use it with any programming language that supports HTTP requests (any library that does it work). Here is an example in JavaScript, using the fetch API:
+
+```js
+fetch('https://nekonya.classydev.fr/api/v1/random/neko')
+  .then((res) => res.json())
+  .then((data) => console.log(data)); // { url: 'https://nekonya.classydev.fr/images/nekos/...' }
+```
+
+You can also use the API with a library like Axios:
+
+```js
+axios.get('https://nekonya.classydev.fr/api/v1/random/neko')
+  .then((res) => console.log(res.data)); // { url: 'https://nekonya.classydev.fr/images/nekos/...' }
+```
+
+## Errors
+
+If an error occurs, the API will return a JSON object with the following properties:
+
+| Property | Description |
+| -------- | ----------- |
+| error | The error type. |
+| message | The error message. |
+| status | The HTTP status code. |
+
+## Rate Limit
+
+There is no rate limit currently on the API. However, be aware of cloudflare's rate limit.
+
+## What next?
+
+If you think making requests manually is such a hassle, you can use our [official clients](/docs/packages/intro) to make requests easily.
+
+See the most used route documentation [here](/docs/api/random).

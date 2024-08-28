@@ -1,23 +1,11 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+adam:
+  name: Adam Billard
+  title: NekoNyaDevs founder
+  description: I'm the founder of NekoNyaDevs, I'm a young inspiring-to-be developer and musician.
+  url: https://classydev.fr
+  image_url: https://github.com/TheDogHusky.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: ClassyCraft3r
+    github: TheDogHusky
+    website: https://classydev.fr

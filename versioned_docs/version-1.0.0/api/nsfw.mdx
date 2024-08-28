@@ -1,0 +1,40 @@
+---
+sidebar_position: 3
+---
+
+# NSFW Images
+
+```
+/random/lewd
+```
+
+This route allows you to get a random NSFW image URL. Please note that this route is NSFW and you should only use it if you are 18+.
+
+## Examples
+
+### Using the fetch API
+
+```js
+fetch('https://nekonya.classydev.fr/api/v1/random/lewd')
+  .then((res) => res.json())
+  .then((data) => console.log(data)); // { url: 'https://nekonya.classydev.fr/images/lewds/...' }
+```
+
+### Using Axios
+
+```js
+axios.get('https://nekonya.classydev.fr/api/v1/random/lewd')
+  .then((res) => console.log(res.data)); // { url: 'https://nekonya.classydev.fr/images/lewds/...' }
+```
+
+### Using the official client
+
+The client does not allow NSFW content for now.
+
+## Response
+
+The response is a JSON object with the following properties:
+
+| Property | Description |
+| -------- | ----------- |
+| url | The URL of the image. |

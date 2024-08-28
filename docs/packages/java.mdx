@@ -1,0 +1,58 @@
+---
+sidebar_position: 3
+---
+
+# Java
+
+We made a Java client for our API. You can find it on our GitHub repository.
+
+:::danger
+
+The Java client is **outdated** and **contains the wrong API URL**. <ins>**It does not work anymore**</ins>, and the contributor responsible for it is no longer active.
+
+Any help or contributions concerning the Java client is welcome.
+
+:::
+
+## Installation
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>org.nekonya.NekoNya4J</groupId>
+    <artifactId>nekonya4j</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Gradle
+
+```gradle
+implementation 'org.nekonya.NekoNya4J:nekonya4j:1.0.0'
+```
+
+## Example
+
+```java
+import org.nekonya.NekoNya4J.NekoNyaClient;
+import org.nekonya.NekoNya4J.NekoNyaInterface;
+
+public class Example {
+    public static void main(String[] args) {
+        NekoNyaClient client = new NekoNyaClient();
+        System.out.println(client.neko());
+        // -> URL
+    }
+}
+```
+
+```java
+public class Example {
+    public static void main(String[] args) {
+        NekoNyaInterface client = NekoNyaInterface.create();
+        System.out.println(client.neko());
+        // -> URL
+    }
+}
+```

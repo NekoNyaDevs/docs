@@ -1,0 +1,50 @@
+---
+sidebar_position: 5
+---
+
+# Owoify
+
+```
+/owoify?text={text}
+```
+
+:::tip
+
+This route also supports using a POST request with the `text` body parameter.
+
+:::
+
+This route allows you to owoify text. You can use it to make your text more cute and adorable.
+
+## Examples
+
+### Using the fetch API
+
+```js
+fetch('https://nekonya.classydev.fr/api/v1/owoify?text=Hello, world!') // don't forget to encode the text
+  .then((res) => res.json())
+  .then((data) => console.log(data)); // { owoified: 'hewwo, wowwd owo' }
+```
+
+### Using Axios
+
+```js
+axios.get('https://nekonya.classydev.fr/api/v1/owoify?text=Hello, world!') // don't forget to encode the text
+  .then((res) => console.log(res.data)); // { owoified: 'hewwo, wowwd owo' }
+```
+
+### Using the official client
+
+```js
+const nekonya = require('nekonya.js');
+
+nekonya.owoify('Hello, world!').then((owoified) => console.log(owoified)); // hewwo, wowwd owo
+```
+
+## Response
+
+The response is a JSON object with the following properties:
+
+| Property | Description |
+| -------- | ----------- |
+| owoified | The owoified text. |

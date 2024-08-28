@@ -1,0 +1,76 @@
+---
+sidebar_position: 2
+---
+
+# JavaScript and TypeScript
+
+We made a client for our API in JavaScript and TypeScript. It is currently published on NPM (Node Package Manager) and you can find it on our GitHub repository.
+
+Please be aware that the client does not support NSFW content for now.
+
+:::note
+
+The package uses [node-fetch](https://www.npmjs.com/package/node-fetch) to make requests to our API.
+
+:::
+
+## Installation
+
+You can install the client using NPM or Yarn.
+
+```bash
+npm install nekonya.js
+```
+
+```bash
+yarn add nekonya.js
+```
+
+## Usage
+
+Firstly, you need to import the client.
+
+```js
+const nekonya = require('nekonya.js');
+```
+
+Then, you can use the client to make requests to our API.
+
+```js
+nekonya.neko().then((url) => console.log(url)); // https://nekonya.classydev.fr/images/nekos/...
+```
+
+## Available methods
+
+Here is a list of the available methods in the client:
+
+| Method | Description |
+| ------ | ----------- |
+| `neko` | Get a random neko image. |
+| `kitsune` | Get a random kitsune image. |
+| `pat` | Get a random pat image. |
+| `hug` | Get a random hug image. |
+| `slap` | Get a random slap image. |
+| `kiss` | Get a random kiss image. |
+| `owoify` | Owoify text. |
+| `eightball` | Get a random answer from the 8ball. |
+
+## TypeScript Support
+
+The package is written in TypeScript. Simply import it as you would in TypeScript.
+
+```ts
+import * as nekonya from 'nekonya.js';
+```
+
+It has types for all the methods, so you can use it in your TypeScript projects without any issues.
+
+## Contributing
+
+If you want to contribute to the client, you can find the repository on GitHub. Feel free to submit a pull request with your changes.
+
+We will be happy to review your changes and merge them if they are good.
+
+## License
+
+The client is open-source and available under the MIT license. You can find the license on the GitHub repository. Please report any issues you find on the repository's issues tab.
