@@ -1,0 +1,42 @@
+---
+slug: versioning
+title: Versioning In My Projects
+authors: [adam]
+tags: [news, announcements]
+---
+
+In this blog post I will explain how I manage the versioning of my projects. I will also explain how I use the versioning in my projects.
+
+<!-- truncate -->
+The version string is always made of **major**.**patch**.**minor** (ex: 2.1.5).
+Versioning in most of my projects works the following way:
+
+## Major
+They are marked as the first number in the version string. They often indicate a **breaking change**, and would probably need you to update your application to make this change.
+
+For a website, I would update this on a complete rewrite of the application (like going from an ExpressJS JavaScript project to an ExpressJS TypeScript project, or to a NuxtJS TypeScript project, with a frontend and backend, best example of this is with [NekoNya](https://nekonya.classydev.fr)).
+
+## Minor
+
+They are marked as the last number in the version string. They are **changes**, not really bug fixes. Bug fixes are on the patch/fix section.
+They essentially are changes that doesn't affect the application/project, aren't breaking changes.
+
+What I **don’t** consider a minor update, and becomes un-versioned:
+- A minor update that doesn’t affect the experience that much
+- A minor bug fix (ex: typo, or little error\*)
+- Anything that does makes a big change or at least medium change to the website
+
+\*: *this is different accross projects. I wouldn't ignore a bug fix in a package and would put it out as a patch/fix but I would in a website.*
+
+## Patch/Fix
+
+They are marked as the second number in the version string.
+As their name says, they are patches or bug fixes.
+They can sometimes affect the behavior of the application.
+
+In a website I would only update this number if this is a major bug fix.
+On a package or other project, I would usually increase the number for small bug fixes to big bug fixes.
+
+## Conclusion
+
+I hope this blog post helped you understand how I manage the versioning of my projects. If you have any questions, feel free to ask me on [Discord](https://discord.gg/DUnuSfFdEM) or my contact email. I will be happy to answer your questions.
