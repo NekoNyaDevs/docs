@@ -37,9 +37,12 @@ If an error occurs, the API will return a JSON object with the following propert
 
 | Property | Description |
 | -------- | ----------- |
-| error | The error type. |
-| message | The error message. |
-| status | The HTTP status code. |
+| error | The error object. |
+| error.message | The error message. |
+| error.code | The error code. |
+| error.type | The error type. This is useful for the backend itself or if you want to make anything big with the API. |
+
+If this error is a validation error, the JSON object will also containe a `errors` property, which is an array of validation errors (from [express-validator#array](https://express-validator.github.io/docs/api/validation-result#array)).
 
 ## Rate Limit
 
