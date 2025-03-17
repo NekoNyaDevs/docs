@@ -5,7 +5,7 @@ sidebar_position: 4
 # Eight-ball
 
 ```
-/random/8ball?cute={true|false}
+/8ball?cute={true|false}
 ```
 
 This route allows you to get a random 8ball answer. You can also get a cute 8ball answer by adding the `cute` query parameter.
@@ -15,7 +15,7 @@ This route allows you to get a random 8ball answer. You can also get a cute 8bal
 ### Using the fetch API
 
 ```js
-fetch('https://nekonya.classydev.fr/api/v1/random/8ball')
+fetch('https://nekonya.classydev.fr/api/v1/8ball')
   .then((res) => res.json())
   .then((data) => console.log(data)); // { answer: 'Yes' }
 ```
@@ -23,7 +23,7 @@ fetch('https://nekonya.classydev.fr/api/v1/random/8ball')
 ### Using Axios
 
 ```js
-axios.get('https://nekonya.classydev.fr/api/v1/random/8ball')
+axios.get('https://nekonya.classydev.fr/api/v1/8ball')
   .then((res) => console.log(res.data)); // { answer: 'Yes' }
 ```
 
