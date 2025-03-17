@@ -23,14 +23,14 @@ This route allows you to owoify text. You can use it to make your text more cute
 ```js
 fetch('https://nekonya.classydev.fr/api/v1/owoify?text=Hello, world!') // don't forget to encode the text
   .then((res) => res.json())
-  .then((data) => console.log(data)); // { owoified: 'hewwo, wowwd owo' }
+  .then((data) => console.log(data)); // { result: 'hewwo, wowwd owo' }
 ```
 
 ### Using Axios
 
 ```js
 axios.get('https://nekonya.classydev.fr/api/v1/owoify?text=Hello, world!') // don't forget to encode the text
-  .then((res) => console.log(res.data)); // { owoified: 'hewwo, wowwd owo' }
+  .then((res) => console.log(res.data)); // { result: 'hewwo, wowwd owo' }
 ```
 
 ### Using the official client
@@ -47,4 +47,4 @@ The response is a JSON object with the following properties:
 
 | Property | Description |
 | -------- | ----------- |
-| owoified | The owoified text. |
+| result | The owoified text. |
