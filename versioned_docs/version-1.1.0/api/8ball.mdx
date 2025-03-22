@@ -1,0 +1,44 @@
+---
+sidebar_position: 4
+---
+
+# Eight-ball
+
+```
+/8ball?cute={true|false}
+```
+
+This route allows you to get a random 8ball answer. You can also get a cute 8ball answer by adding the `cute` query parameter.
+
+## Examples
+
+### Using the fetch API
+
+```js
+fetch('https://nekonya.classydev.fr/api/v1/8ball')
+  .then((res) => res.json())
+  .then((data) => console.log(data)); // { answer: 'Yes' }
+```
+
+### Using Axios
+
+```js
+axios.get('https://nekonya.classydev.fr/api/v1/8ball')
+  .then((res) => console.log(res.data)); // { answer: 'Yes' }
+```
+
+### Using the official client
+
+```js
+const nekonya = require('nekonya.js');
+
+nekonya.eightball().then((answer) => console.log(answer));
+```
+
+## Response
+
+The response is a JSON object with the following properties:
+
+| Property | Description |
+| -------- | ----------- |
+| answer | The 8ball answer. |

@@ -1,0 +1,53 @@
+---
+sidebar_position: 2
+---
+
+# Random Images
+
+```
+/random/:type
+```
+
+This route allows you to get a random image URL from the type you entered. Here are the current types:
+
+| Type | Description |
+| ---- | ----------- |
+| neko | A random neko image. |
+| kitsune | A random kitsune image. |
+| pat | A random pat image. |
+| hug | A random hug image. |
+| slap | A random slap image. |
+| kiss | A random kiss image. |
+
+## Examples
+
+### Using the fetch API
+
+```js
+fetch('https://nekonya.classydev.fr/api/v1/random/neko')
+  .then((res) => res.json())
+  .then((data) => console.log(data)); // { url: 'https://nekonya.classydev.fr/images/nekos/...' }
+```
+
+### Using Axios
+
+```js
+axios.get('https://nekonya.classydev.fr/api/v1/random/neko')
+  .then((res) => console.log(res.data)); // { url: 'https://nekonya.classydev.fr/images/nekos/...' }
+```
+
+### Using the official client
+
+```js
+const nekonya = require('nekonya.js');
+
+nekonya.neko().then((url) => console.log(url)); // https://nekonya.classydev.fr/images/nekos/...
+```
+
+## Response
+
+The response is a JSON object with the following properties:
+
+| Property | Description |
+| -------- | ----------- |
+| url | The URL of the image. |
