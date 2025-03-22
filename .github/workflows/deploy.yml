@@ -17,5 +17,6 @@ jobs:
           host: ${{ secrets.HOSTNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
           script_stop: true
           script: sudo ./util/scripts/update_nekonya_docs.sh
